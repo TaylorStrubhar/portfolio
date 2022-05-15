@@ -16,6 +16,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+section {
+
+    padding: 60px;
+
+}
+
 a {
     color: var(--tertiary-color);
     text-decoration: none;
@@ -25,6 +31,7 @@ p {
     font-size: 16px;
 }
 /* header & hero */
+
 .header {
     display: flex;
 
@@ -71,7 +78,11 @@ p {
 }
 
 .header nav ul {
-    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
 .header nav ul li {
@@ -168,6 +179,91 @@ p {
     width: 100%;
 }
 
+/*Reach Out and Footer Styling */
+footer {
+
+    background: var(--primary-color);
+
+    width: 100%;
+
+    padding: 40px 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+}
+
+footer h2 {
+
+    color: var(--secondary-color);
+
+    font-size: 30px;
+
+    margin: 0;
+
+}
+
+footer div {
+
+    line-height: 1.5;
+
+    text-align: right;
+
+}
+
+footer a {
+
+    color: var(--secondary-color);
+
+}
+
+contact {
+    background: var(--secondary-color);
+}
+
+contact h2 {
+    color: var(--primary-color);
+}
+
+.reach-out {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: var(--primary-color);
+
+    width: 100%;
+
+    padding: 40px 35px;
+}
+
+.reach-out > * {
+    flex: 1;
+    margin: 15px;
+}
+
+.reach-out div {
+    color: white;
+}
+
+.reach-out h3 {
+    color: var(--secondary-color);
+    font-size: 32px;
+}
+
+.reach-out p, .reach-out address {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.reach-out a {
+    color: var(--secondary-color);
+}
+
 
 /* Media Queries for DesktopScreens and Below */
 @media screen and (max-width: 980px) {
@@ -212,9 +308,6 @@ p {
         flex: 0 70%;
       }
       
-    .contact-info iframe{
-        flex: 1 100%;
-      }
   }
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
@@ -267,15 +360,12 @@ p {
         flex: 0 100%;
       }
     
-    .contact-info {
+    .reach-out {
         text-align: center;
       }
     
-    .contact-info > * {
+    .reach-out > * {
         flex: 0 100%;
       }
 
-    .contact-form {
-        order: 3;
-      }
   }  
