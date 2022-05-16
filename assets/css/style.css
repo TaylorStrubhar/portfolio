@@ -1,7 +1,7 @@
 :root {
     --primary-color: #4cff82;
     --secondary-color: #e174e1;
-    --tertiary-color: #f0e8f0;
+    --tertiary-color: #a970f3;
 }
 
 * {
@@ -23,12 +23,16 @@ section {
 }
 
 a {
-    color: var(--tertiary-color);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 p {
     font-size: 16px;
+}
+
+.flex-row {
+    display: flex;
 }
 /* header & hero */
 
@@ -63,6 +67,7 @@ p {
 .header h1 {
     display: inline-block;
     font-size: 48px;
+    text-shadow: 2px 2px 5px black;
 }
 
 .header h1 .middle {
@@ -95,11 +100,11 @@ p {
 .header nav ul li a {
     padding: 10px 15px;
 
-    font-weight: lighter;
+    font-weight: bolder;
 
     font-size: 1.55vw;
 
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px black;
 }
 
 .hero {
@@ -112,6 +117,8 @@ p {
     background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 .bio {
@@ -138,25 +145,24 @@ p {
 
     color: var(--primary-color);
 
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 
+}
+
+.bio p {
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.9);
+    font-weight: bold;
 }
 
 .self-image {
 
-    background-color: rgba(0,0,0, 0.8);
-
-    padding: 20px;
+    padding: 10px;
 
     color: var(--secondary-color);
 
-    border: solid 3px var(--secondary-color);
-
-    width: 40%;
+    width: 30%;
 
     margin: 3.5%;
-
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
     border-radius: 15px;
 
@@ -176,7 +182,53 @@ p {
 }
 
 .self-image img {
+    width: 70%;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.9);
+}
+/*Works Section */
+.work-parent {
+    background-color: var(--tertiary-color);
+}
+.section-title {
+    font-size: 48px;
+    color: var(--secondary-color);
+    border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+}
+
+.primary-border {
+    border-color: var(--primary-color);
+}
+
+.works {
     width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.work1, .work2, .work3, .work4, .work5 {
+    margin: 20px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    flex: 1;
+}
+
+.work-text {
+    padding: 25px;
+    line-height: 1.3;
+}
+
+.work-text h3 {
+    font-size: 28px;
+}
+
+.work-text p {
+    font-size: 17px;
 }
 
 /*Reach Out and Footer Styling */
@@ -293,7 +345,7 @@ contact h2 {
     }
 
     .bio, .self-image {
-        width: 100%;
+        width: 70%;
       }
       
     .bio {
